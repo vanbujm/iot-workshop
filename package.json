@@ -1,0 +1,8 @@
+{
+  "name": "iot-workshop",
+  "version": "1.0.0",
+  "description": "An awesome workshop run and written by JVB",
+  "main": "index.js",
+  "author": "Jon Van Buren",
+  "license": "MIT"
+}
