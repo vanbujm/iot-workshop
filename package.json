@@ -21,7 +21,11 @@
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1",
+    "raspi": "^6.0.1",
+    "raspi-led": "^2.1.1"
+  },
   "scripts": {
     "build": "webpack",
     "build:dev": "webpack --env=dev --watch"
