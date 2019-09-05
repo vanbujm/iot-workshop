@@ -1,6 +1,6 @@
 import { ON, OFF } from 'raspi-led';
 
-export const flashLED = (statusLed) => {
+export const flashLED = statusLed => {
   if (statusLed.read() === ON) {
     statusLed.write(OFF); // Turn off the status LED
   } else {
@@ -8,6 +8,6 @@ export const flashLED = (statusLed) => {
   }
 };
 
-export const turnOffLED = (statusLed) => {
+export const turnOffLED = statusLed => {
   statusLed.write(OFF);
 };

@@ -23,10 +23,14 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "jest": "^24.9.0"
+  },
+  "optionalDependencies": {
     "raspi": "^6.0.1",
     "raspi-led": "^2.1.1"
   },
   "scripts": {
+    "test": "jest",
     "build": "webpack",
     "build:dev": "webpack --env=dev --watch"
   }

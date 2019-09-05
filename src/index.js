@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 import express from 'express';
 import { init } from 'raspi';
-import { LED, } from 'raspi-led';
+import { LED } from 'raspi-led';
 import { flashLED, turnOffLED } from './flashService';
 
-const parseSpeed = (speed) => {
+const parseSpeed = speed => {
   const speedNum = Number(speed);
   if (Number.isNaN(speedNum)) return null;
   return speedNum;
