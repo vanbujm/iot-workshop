@@ -31,6 +31,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:ci": "jest --ci --coverage",
     "build": "webpack",
     "build:dev": "webpack --env=dev --watch"
   }

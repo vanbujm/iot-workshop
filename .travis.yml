@@ -1,0 +1,34 @@
+jobs:
+  include:
+    - stage: test
+      install:
+        - yarn
+      language: node_js
+      node_js: '12'
+      script:
+        - yarn test:ci
+      cache:
+        yarn: true
+    - stage: deploy
+      services:
+        - docker
+      install:
+        - docker pull vanbujm/moonbase-balena:v0.1.0-ci-v0.2.15
+      language: minimal
+      script:
+        - |
+        - | docker run -v $(pwd):/usr/app -v $(yarn cache dir):/yarn-cache vanbujm/purple-iot-worshop-balena:latest -c "yarn --cache-folder  /yarn-cache && yarn && yarn build"
+          | cd build
+          | cp ../images/prod/* ./
+          | eval "$(ssh-agent -s)"
+          | echo -e ${BALENA_CLOUD_KEY} > id_rsa
+          | chmod 0600 id_rsa
+          | ssh-add ./id_rsa
+          | cat balenakey >> ~/.ssh/known_hosts
+          | git remote add balena ${BALENA_REMOTE}
+          | git fetch --unshallow origin
+          | git commit -am "build" --allow-empty
+          | git push -f balena master
+stages:
+  - test
+  - deploy
