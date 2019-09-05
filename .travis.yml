@@ -16,6 +16,7 @@ jobs:
         - docker pull vanbujm/purple-iot-worshop-balena:latest
       language: minimal
       script:
+        - echo ${BALENA_REMOTE}
         - docker run -v $(pwd):/usr/app -v $(yarn cache dir):/yarn-cache vanbujm/purple-iot-worshop-balena:latest -c "yarn --cache-folder  /yarn-cache && yarn && yarn build"
         - cd build
         - cp ../images/prod/* ./
