@@ -7,7 +7,6 @@ deploy() {
   ssh-keyscan git.balena-cloud.com >>balenakey
   cat balenakey >>~/.ssh/known_hosts
   git remote add balena "${BALENA_REMOTE}"
-  git fetch --unshallow origin
   git push -f balena master
 }
 

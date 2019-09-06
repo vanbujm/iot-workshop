@@ -14,10 +14,6 @@ jobs:
     - stage: deploy
       language: node_js
       node_js: '12'
-      services:
-        - docker
-      install:
-        - docker pull vanbujm/purple-iot-worshop-balena:latest
       script:
         - ./deploy.sh
       cache:
