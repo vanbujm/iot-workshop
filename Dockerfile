@@ -8,9 +8,10 @@ RUN yarn build
 
 RUN rm -rdf node_modules
 RUN yarn cache clean
-RUN find . -maxdepth 1 ! -iname build -exec rm -rdf {} \;
-RUN mv build/ ./
-RUN rm -d build
+RUN find . -maxdepth 1 ! -iname build
+#RUN find . -maxdepth 1 ! -iname build -exec rm -rdf {} \;
+#RUN mv build/ ./
+#RUN rm -d build
 
 WORKDIR /usr/app
 
