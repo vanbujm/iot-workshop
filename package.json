@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Jon Van Buren",
   "license": "MIT",
+  "engines": {
+    "node": "12"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
