@@ -32,7 +32,7 @@
   "scripts": {
     "test": "jest",
     "test:ci": "jest --ci --coverage",
-    "build": "NODE_OPTIONS=--max-old-space-size=4096 webpack",
+    "build": "webpack",
     "build:dev": "webpack --env=dev --watch"
   }
 }
