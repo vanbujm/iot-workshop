@@ -13,4 +13,4 @@ LABEL com.circleci.preserve-entrypoint=true
 
 WORKDIR /usr/app
 
-CMD ["/bin/bash"]
+#CMD ["/bin/bash"]
