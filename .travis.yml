@@ -18,6 +18,8 @@ jobs:
         - docker pull vanbujm/purple-iot-worshop-balena:latest
       script:
         - ./deploy.sh
+      cache:
+        yarn: true
 stages:
   #  - test
   - deploy
