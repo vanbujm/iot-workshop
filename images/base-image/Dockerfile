@@ -3,7 +3,6 @@ FROM balenalib/raspberrypi3-debian-node
 WORKDIR /usr/app
 COPY package.json ./package.json
 COPY . ./
-RUN yarn config set cache-folder /yarn-cache
 RUN yarn
 RUN yarn build
 

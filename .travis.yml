@@ -16,8 +16,6 @@ jobs:
       node_js: '12'
       script:
         - ./deploy.sh
-      cache:
-        yarn: true
 stages:
-  #  - test
+    - test
   - deploy
