@@ -8,7 +8,7 @@ else
   version_tag="${base_tag}${version}"
   latest_tag="${base_tag}latest"
 
-  docker build -t ${version_tag} -t ${latest_tag} .
-  docker push ${version_tag}
+  docker build -t ${version_tag} -t ${latest_tag} . &&
+  docker push ${version_tag} &&
   docker push ${latest_tag}
 fi
