@@ -35,7 +35,7 @@ export default {
     publicPath: '/'
   },
   mode: 'production',
-  entry: './src/main.js',
+  entry: './src/index.js',
   target: 'node',
   module: {
     rules: [
