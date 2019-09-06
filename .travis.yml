@@ -14,7 +14,7 @@ jobs:
         - docker
       install:
         - docker pull vanbujm/purple-iot-worshop-balena:latest
-      language: minimal
+      language: node_js
       script:
         - ./deploy.sh
 stages:

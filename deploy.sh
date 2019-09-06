@@ -1,6 +1,5 @@
 deploy() {
-#  docker run -v "$(pwd)":/usr/app -v "$(yarn cache dir)":/yarn-cache vanbujm/purple-iot-worshop-balena:latest bash -c "yarn --cache-folder  /yarn-cache && yarn && yarn build"
-  docker run -v "$(pwd)":/usr/app -v "$(yarn cache dir)":/yarn-cache vanbujm/purple-iot-worshop-balena:latest bash -c "which yarn && which node"
+  docker run -v "$(pwd)":/usr/app -v "$(yarn cache dir)":/yarn-cache vanbujm/purple-iot-worshop-balena:latest bash -c "yarn --cache-folder  /yarn-cache && yarn && yarn build"
   cd build || exit 1
   cp ../images/prod/* ./
   eval "$(ssh-agent -s)"
