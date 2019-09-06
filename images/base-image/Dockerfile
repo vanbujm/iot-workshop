@@ -1,5 +1,6 @@
 FROM balenalib/raspberrypi3-debian-node
 
+COPY package.json ./package.json
 COPY . ./
 RUN yarn config set cache-folder /yarn-cache
 RUN yarn
