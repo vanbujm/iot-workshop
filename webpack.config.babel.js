@@ -34,6 +34,7 @@ export default {
     filename: 'index.js',
     publicPath: '/'
   },
+  devtool: 'false',
   mode: 'production',
   entry: './src/index.js',
   target: 'node',
@@ -41,6 +42,7 @@ export default {
     rules: [
       {
         test: /\.js$/,
+        exclude: /(node_modules)/,
         use: 'babel-loader'
       }
     ]
