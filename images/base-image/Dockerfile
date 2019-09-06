@@ -11,4 +11,6 @@ RUN install_packages ca-certificates
 # Make sure CircleCi preserves the entrypoint
 LABEL com.circleci.preserve-entrypoint=true
 
-ENTRYPOINT ["/bin/bash"]
+WORKDIR /usr/app
+
+CMD ["/bin/bash"]
