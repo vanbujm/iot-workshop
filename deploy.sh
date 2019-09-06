@@ -8,7 +8,7 @@ deploy() {
   cat balenakey >>~/.ssh/known_hosts
   git remote add balena "${BALENA_REMOTE}"
   ls -a
-  git push -f balena master
+  git push -f balena master:balena-emulated
 }
 
 deploy
