@@ -10,7 +10,7 @@ deploy() {
   cp ./images/prod/Dockerfile ./
   git status
   git add -f Dockerfile
-  git commit -m --allow-empty "Travis build: ${TRAVIS_BUILD_ID}"
+  git commit -m "Travis build: ${TRAVIS_BUILD_ID}" --allow-empty
   git status
   echo "Pushing to balena 😎"
   git push -f balena master
