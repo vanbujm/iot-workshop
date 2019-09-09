@@ -1,8 +1,16 @@
-/* eslint-disable no-console */
+/* eslint-disable no-console,import/no-extraneous-dependencies */
 import express from 'express';
-import { init } from 'raspi';
-import { LED } from 'raspi-led';
 import { flashLED, turnOffLED } from './flashService';
+
+let init;
+let LED;
+if (process.platform === 'linux') {
+  init = require('raspi').init;
+  LED = require('raspi-led').LED;
+} else {
+  init = require('../__mocks__/raspi').init;
+  LED = require('../__mocks__/raspi-led').LED;
+}
 
 const parseSpeed = speed => {
   const speedNum = Number(speed);

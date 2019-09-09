@@ -1,6 +1,5 @@
 import { flashLED, turnOffLED } from './flashService';
 
-
 const statusLedMock = {
   read: jest.fn(),
   write: jest.fn()
@@ -14,7 +13,7 @@ beforeEach(() => {
 describe('flashService', () => {
   describe('flashLED', () => {
     it('toggles the status LED on and off', () => {
-      statusLedMock.read.mockImplementation(() =>  'OFF');
+      statusLedMock.read.mockImplementation(() => 'OFF');
 
       flashLED(statusLedMock);
 
@@ -25,19 +24,18 @@ describe('flashService', () => {
       statusLedMock.read.mockClear();
       statusLedMock.write.mockClear();
 
-      statusLedMock.read.mockImplementation(() =>  'ON');
+      statusLedMock.read.mockImplementation(() => 'ON');
 
       flashLED(statusLedMock);
 
-      expect(statusLedMock.write).toBeCalledWith('OFF')
-
-    })
+      expect(statusLedMock.write).toBeCalledWith('OFF');
+    });
   });
 
   describe('turnOffLED', () => {
     it('Turns off the LED', () => {
       turnOffLED(statusLedMock);
       expect(statusLedMock.write).toBeCalled();
-    })
+    });
   });
 });
