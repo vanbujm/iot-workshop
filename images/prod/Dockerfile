@@ -3,9 +3,9 @@ FROM balenalib/raspberrypi3-debian-node
 WORKDIR /usr/app
 # Copy package first because it will help with caching
 COPY package.json ./package.json
-COPY . ./
-
 RUN yarn
+
+COPY . ./
 RUN yarn build
 
 # Clean up files because we want to use build as our new working dir but we also dont want to setup a new git
