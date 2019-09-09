@@ -3,7 +3,7 @@ FROM balenalib/raspberrypi3-debian-node
 WORKDIR /usr/app
 # Copy package first because it will help with caching
 COPY package.json ./package.json
-COPY ../base-image ./
+COPY . ./
 
 RUN yarn
 RUN yarn build
