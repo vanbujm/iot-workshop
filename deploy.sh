@@ -9,8 +9,8 @@ deploy() {
   git init
   git remote add balena "${BALENA_REMOTE}"
   cp ./images/prod/Dockerfile ./
-  git status
-  git commit -am "Travis build: ${TRAVIS_BUILD_ID}" --allow-empty
+  git add -A
+  git commit -m "Travis build: ${TRAVIS_BUILD_ID}" --allow-empty
   git status
   echo "Pushing to balena 😎"
   git push -f balena master:balena-nocache
