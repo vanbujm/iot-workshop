@@ -33,7 +33,7 @@
   "scripts": {
     "dev": "nodemon --exec yarn run babel-node -- src/index.js",
     "test": "jest",
-    "test:ci": "jest --ci --coverage -passWithNoTests",
+    "test:ci": "jest --ci --coverage --passWithNoTests",
     "build": "webpack",
     "build:dev": "webpack --env=dev --watch"
   }
