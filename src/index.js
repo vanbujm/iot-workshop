@@ -1,7 +1,4 @@
-/* eslint-disable no-console,import/no-extraneous-dependencies */
 import express from 'express';
-import { flashLED, turnOffLED } from './flashService';
-import { init, LED } from './led';
 
 const parseSpeed = speed => {
   const speedNum = Number(speed);
@@ -11,29 +8,27 @@ const parseSpeed = speed => {
 
 let ledInterval;
 
-init(() => {
-  const statusLed = new LED();
+const app = express();
+const port = 3000;
 
-  const app = express();
-  const port = 3000;
+app.get('/', ({ query: { speed } }, res) => {
+  const requestedSpeed = parseSpeed(speed);
 
-  app.get('/', ({ query: { speed } }, res) => {
-    const requestedSpeed = parseSpeed(speed);
+  if (!requestedSpeed && ledInterval) {
+    clearInterval(ledInterval);
+    // Do something
+    return res.send('Off');
+  }
 
-    if (!requestedSpeed && ledInterval) {
-      clearInterval(ledInterval);
-      turnOffLED(statusLed);
-      return res.send('Off');
-    }
+  const flashSpeed = requestedSpeed || 500;
 
-    const flashSpeed = requestedSpeed || 500;
+  if (ledInterval) clearInterval(ledInterval);
 
-    if (ledInterval) clearInterval(ledInterval);
-
-    ledInterval = setInterval(() => flashLED(statusLed), flashSpeed);
-
-    return res.send(`✨  Flashing at ${flashSpeed}ms`);
+  ledInterval = setInterval(() => {
+    // Do something
   });
 
-  app.listen(port, () => console.info(`🚀  App is listening on port ${port}!`));
+  return res.send(`✨  Flashing at ${flashSpeed}ms`);
 });
+
+app.listen(port, () => console.info(`🚀  App is listening on port ${port}!`));
