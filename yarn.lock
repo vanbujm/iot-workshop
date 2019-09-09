@@ -3674,11 +3674,6 @@ istanbul-reports@^2.2.6:
   dependencies:
     handlebars "^4.1.2"
 
-j5-io-types@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/j5-io-types/-/j5-io-types-2.4.0.tgz#c07803474894d8890d509bb952e160dbf6fe6763"
-  integrity sha512-8S1Bptg9iFvqVQaajO5uRYvt4WW5AzY6BpeVLxVMFhd/2vfQ9gIReuC4bKWVsOO7BbAvNZEwTTERPUqh2E+myg==
-
 jest-changed-files@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-24.9.0.tgz#08d8c15eb79a7fa3fc98269bc14b451ee82f8039"
@@ -5382,38 +5377,6 @@ range-parser@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
-
-raspi-board@^7.0.0, raspi-board@^7.1.2:
-  version "7.2.3"
-  resolved "https://registry.yarnpkg.com/raspi-board/-/raspi-board-7.2.3.tgz#ff76f782f118780614160de80b75ae7e99cb51e2"
-  integrity sha512-gQLu3crUa44TmEt1nilcEM7kWxzX3RgSENHOcClpfv2v5EF9VLTdNb4vdhjJv0P30QWslYqF+Ztsk5ZUxdrlYw==
-  dependencies:
-    j5-io-types "^2.4.0"
-
-raspi-led@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/raspi-led/-/raspi-led-2.1.1.tgz#034c47bb744d3d7f3c1567a5e4744bfda76ae621"
-  integrity sha512-cLwyAvVyxgU6KyN49lbS4xRhagqV5Xu6I6y1E4d5HmOYuBHQdBwkKuOGEpYPcRICzxtW8GCq2DSdlGluk2uDCw==
-  dependencies:
-    j5-io-types "^2.4.0"
-    raspi-peripheral "^3.0.3"
-
-raspi-peripheral@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/raspi-peripheral/-/raspi-peripheral-3.0.3.tgz#1c0314c8066133dc534574d1c26a8c5fa9dbc456"
-  integrity sha512-MHQiIH9RelUFMLorLg6RCdUIBOg849iuNNySHYgTi8xedq7+qx/ynwdApSONXRKrrPzx/DLIWzSqgBRkybfC+A==
-  dependencies:
-    j5-io-types "^2.4.0"
-    raspi "^6.0.1"
-    raspi-board "^7.1.2"
-
-raspi@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/raspi/-/raspi-6.0.1.tgz#a74d51b6764bbd24b676ad3c01dffcf353354ccd"
-  integrity sha512-vv7P8QgUCC0wjN9aBGi7SKy7LClZSsIMSQyEE+GUVzImbX44OTftj3Vjo+Kbl2d+acmjBNNkEk/jnzXDZMcI5g==
-  dependencies:
-    j5-io-types "^2.4.0"
-    raspi-board "^7.0.0"
 
 raw-body@2.4.0:
   version "2.4.0"
