@@ -35,5 +35,5 @@ init(() => {
     return res.send(`Flashing at ${flashSpeed}ms`);
   });
 
-  app.listen(port, () => console.info(`🚀 App is listening on port ${port}!`));
+  app.listen(port, () => console.info(`🚀  App is listening on port ${port}!`));
 });
