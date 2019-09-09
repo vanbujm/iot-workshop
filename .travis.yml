@@ -9,6 +9,7 @@ jobs:
         - yarn test:ci
       cache:
         yarn: true
+
     - stage: deploy
       language: node_js
       node_js: '12'
