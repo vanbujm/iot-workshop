@@ -7,6 +7,7 @@ deploy() {
   cat balenakey >>~/.ssh/known_hosts
   git remote add balena "${BALENA_REMOTE}"
   git fetch balena
+  ls -a
   cp ./images/prod/Dockerfile ./
   git status
   git add -f Dockerfile
