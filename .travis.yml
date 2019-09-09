@@ -15,5 +15,5 @@ jobs:
       script:
         - ./deploy.sh
 stages:
-#  - test
+  - test
   - deploy
