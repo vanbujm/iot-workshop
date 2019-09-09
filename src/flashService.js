@@ -1,15 +1,4 @@
-let ON;
-let OFF;
-if (process.platform === 'linux') {
-  // eslint-disable-next-line import/no-unresolved
-  const raspiLed = require('raspi-led');
-  ON = raspiLed.ON;
-  OFF = raspiLed.OFF;
-} else {
-  const raspiLed = require('../__mocks__/raspi-led');
-  ON = raspiLed.ON;
-  OFF = raspiLed.OFF;
-}
+import { ON, OFF } from './led';
 
 export const flashLED = statusLed => {
   if (statusLed.read() === ON) {

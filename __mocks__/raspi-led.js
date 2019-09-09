@@ -13,7 +13,7 @@ export class LED {
   write(ledStatus) {
     this.led = ledStatus;
     // eslint-disable-next-line no-console
-    console.info(`On board LED is now ${ledStatus}`);
+    console.info(`${ledStatus === ON ? '💚' : '❤️ ' } On board LED is now ${ledStatus}`);
   }
 }
 

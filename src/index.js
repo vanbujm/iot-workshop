@@ -1,16 +1,7 @@
 /* eslint-disable no-console,import/no-extraneous-dependencies */
 import express from 'express';
 import { flashLED, turnOffLED } from './flashService';
-
-let init;
-let LED;
-if (process.platform === 'linux') {
-  init = require('raspi').init;
-  LED = require('raspi-led').LED;
-} else {
-  init = require('../__mocks__/raspi').init;
-  LED = require('../__mocks__/raspi-led').LED;
-}
+import { init, LED } from './led';
 
 const parseSpeed = speed => {
   const speedNum = Number(speed);
@@ -44,5 +35,5 @@ init(() => {
     return res.send(`Flashing at ${flashSpeed}ms`);
   });
 
-  app.listen(port, () => console.info(`App listening on port ${port}!`));
+  app.listen(port, () => console.info(`🚀 App is listening on port ${port}!`));
 });
