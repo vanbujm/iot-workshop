@@ -6,9 +6,10 @@ deploy() {
   ssh-keyscan git.balena-cloud.com >>balenakey
   cat balenakey >>~/.ssh/known_hosts
   git remote add balena "${BALENA_REMOTE}"
+  git fetch balena
   cp ./images/prod/Dockerfile ./
   git status
-  git add Dockerfile
+  git add -f Dockerfile
   git commit -m "Travis build: ${TRAVIS_BUILD_ID}"
   git status
   echo "Pushing to balena 😎"
