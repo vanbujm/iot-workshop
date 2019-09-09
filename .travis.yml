@@ -16,4 +16,5 @@ jobs:
         - ./deploy.sh
 stages:
   - test
-  - deploy
+  - name: deploy
+    if: branch = master
