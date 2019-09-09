@@ -11,7 +11,6 @@ deploy() {
   cp ./images/prod/Dockerfile ./
   git add -A
   git commit -m "Travis build: ${TRAVIS_BUILD_ID}" --allow-empty
-  git status
   echo "Pushing to balena 😎"
   git push -f balena master
 }
