@@ -32,7 +32,7 @@ init(() => {
 
     ledInterval = setInterval(() => flashLED(statusLed), flashSpeed);
 
-    return res.send(`Flashing at ${flashSpeed}ms`);
+    return res.send(`✨  Flashing at ${flashSpeed}ms`);
   });
 
   app.listen(port, () => console.info(`🚀  App is listening on port ${port}!`));
