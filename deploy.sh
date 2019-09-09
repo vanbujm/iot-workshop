@@ -1,5 +1,5 @@
 deploy() {
-  eval "$(ssh-agent -s)" \
+  eval "$(ssh-agent -s)"
   echo -e "${BALENA_CLOUD_KEY}" >id_rsa
   chmod 0600 id_rsa
   ssh-add ./id_rsa
