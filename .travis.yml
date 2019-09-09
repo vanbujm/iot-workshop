@@ -11,10 +11,9 @@ jobs:
         yarn: true
 
     - stage: deploy
-      language: node_js
-      node_js: '12'
+      language: minimal
       script:
         - ./deploy.sh
 stages:
-  - test
+#  - test
   - deploy
