@@ -11,9 +11,6 @@ jobs:
         yarn: true
 
     - stage: deploy
-      addons:
-        hosts:
-          - git.balena-cloud.com
       language: minimal
       script:
         - ./deploy.sh
