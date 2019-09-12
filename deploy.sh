@@ -1,3 +1,5 @@
+set -uo pipefail
+
 deploy() {
   eval "$(ssh-agent -s)"
   echo -e "${BALENA_CLOUD_KEY}" >id_rsa
